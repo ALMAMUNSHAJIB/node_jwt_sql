@@ -5,6 +5,7 @@ const bodyParser   = require('body-parser');
 const route = require('./routes/router');
 
 
+
 const app = express();
 //Set vie engine
 app.set('view engine', 'ejs');
@@ -19,7 +20,8 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
-dotenv.config({path: './env/.env'});
+//dotenv.config({path: '.env'});
+dotenv.config({path: './evn/.env'});
 
 app.use(cookieParser());
 
